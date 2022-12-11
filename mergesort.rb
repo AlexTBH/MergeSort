@@ -23,14 +23,15 @@ def mergeSort(input)
     #----------------------------------------------------------
 
     #Alternitave 2
-    #find a way to save elemtns from array to a variable, split the array in half
-    #send both halves down the method mergeSort()
-    #send the half of the array further down in the recursion
-    #also need to send the other half of the array further down
+    #send both halves down the method mergeSort() and save it in a variable, for example
+        #var1 = mergeSort(arr1)
+        #var2 = mergeSort(arr2)
 
     #----- This is when the recursion stops and the arrays returns from the stack.
 
-    #compare two arrays, sort the array
+    #compare two arrays, sort the array, iterate throguh both arrays to compare them?
+    #return the array
+
     #Alternitave 2
 
 
