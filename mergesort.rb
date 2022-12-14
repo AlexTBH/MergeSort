@@ -30,12 +30,22 @@ def mergeSort(input)
     #----- This is when the recursion stops and the arrays returns from the stack.
 
     #compare two arrays, sort the array, iterate throguh both arrays to compare them?
-    #return the array
+    # var1, var2
+    
+
+    # var1.each_with_index do |elem, i|
+    #   if var2 > var1
+    #       var1.insert(i, var2[i])
+    #   end
+    #end
 
     #Alternitave 2
 
 
 
 
-    # 1, 5, 2, 7, 1, 7, 3, 2, 9, 10, 13
+    # 1, 1, 1, 1, 9, 
+    # 2, 3, 7, 9, 10,
+    
+    # 1, 1, 2, 3, 5, 6, 7, 9, 9, 10, 
 end
