@@ -1,42 +1,44 @@
 def mergeSort(arr)
 
-    unless arr.length < 1
-        
+    unless arr.length > 1
+        return arr    
     end
 
-    puts arr.each_slice((arr.size/2.0).round).to_a
-  
-    #send both halves down the method mergeSort() and save it in a variable, for example
-    #var = arr.length/2
-
-        #var1 = mergeSort(arr1)
-        #var2 = mergeSort(arr2)
-
-    #----- This is when the recursion stops and the arrays returns from the stack.
-
-    #compare two arrays, sort the array, iterate throguh both arrays to compare them?
-    # var1, var2
+    half = (arr.length / 2).round
+    arr1 = arr.slice(0, half)
+    arr2 = arr.slice(half, arr.length)
     
-    # var1.each_with_index do |elem, i|
-    #   if var2[i] > var1[i]
-    #       var1.insert(i, var2[i])
-    #   end
-    #end
+    var1 = mergeSort(arr1)
+    var2 = mergeSort(arr2)
+    var3 = []
 
-    #i = 0
-    #   while input.length > n
-    #       if var2[i] > var1[i]
-    #           var1.insert(i, var2[i])
-    #       end
-    #   i++
-    #   return var1
-
-    # 1, 1, 1, 1, 9,
-
-    # 2, 3, 7, 9, 10,
-    
-
-    
+    i = 0
+    while arr.length > i
+        if (var1[0] == nil && var2[0] == nil)
+            return var3
+        elsif var2[0] == nil
+            var3 << var1[0]
+            var1.shift
+        elsif var1[0] == nil
+            var3 << var2[0]
+            var2.shift
+        elsif var2[0] > var1[0]
+            var3 << var1[0]
+            var1.shift
+        elsif var1[0] > var2[0]
+            var3 << var2[0]
+            var2.shift
+        elsif var1[0] == var2[0]
+            var3 << var1[0]
+            var1.shift
+        end
+        i+=1
+    end
+    var3
 end
 
-mergeSort([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+test = [11, 5, 6, 8, 5, 7, 4, 11, 16, 12, 1, 3, 4, 1, 2]
+
+
+p mergeSort(test)
