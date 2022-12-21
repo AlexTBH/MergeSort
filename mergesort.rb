@@ -35,6 +35,21 @@ def mergeSort(arr)
         i+=1
     end
     var3
+
+
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    
 end
 
 
