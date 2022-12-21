@@ -22,34 +22,16 @@ def mergeSort(arr)
         elsif var1[0] == nil
             var3 << var2[0]
             var2.shift
-        elsif var2[0] > var1[0]
+        elsif (var2[0] > var1[0] || var1[0] == var2[0])
             var3 << var1[0]
             var1.shift
         elsif var1[0] > var2[0]
             var3 << var2[0]
             var2.shift
-        elsif var1[0] == var2[0]
-            var3 << var1[0]
-            var1.shift
         end
         i+=1
     end
     var3
-
-
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    
 end
 
 
